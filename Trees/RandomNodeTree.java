@@ -31,7 +31,7 @@ public class RandomNodeTree {
             return new BTNode(val);
         }
 
-        if (val <= root.val) { // BST insert
+        if (val <= root.val) { // Binary search tree insert
             root.left = insert(root.left, val);
         } else {
             root.right = insert(root.right, val);
