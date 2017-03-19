@@ -42,7 +42,7 @@ public class PartsSum {
         passValues.remove(newElement);
         return count;
     }
-    
+
     public static void main(String[] args) {
         BTNode n1 = new BTNode(1);
         n1.left = new BTNode(2);
