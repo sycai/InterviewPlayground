@@ -40,8 +40,13 @@ public class CoinSet {
             }
         }
 
+        // Table printing
+        System.out.print("v= \t\t");
+        for (int i= 0; i < P[0].length; i++)
+            System.out.print(i+"\t\t");
+        System.out.println();
         for (int i = 0; i < P.length; i++) {
-            System.out.print("i=" + i + ": ");
+            System.out.print("i=" + i + ":\t");
             for (int j = 0; j <P[0].length; j++) {
                 System.out.print(P[i][j] + "\t");
             }
@@ -50,7 +55,7 @@ public class CoinSet {
     }
 
     public static void main(String[] args) {
-        int[] coins = {0,1,2,5};
+        int[] coins = {0,5,1,2};
         CoinSet cs = new CoinSet(coins, 8);
     }
 }
