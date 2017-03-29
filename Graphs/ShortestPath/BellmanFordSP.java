@@ -1,4 +1,8 @@
-package Graphs;
+package Graphs.ShortestPath;
+
+import Graphs.DirectedEdge;
+import Graphs.EdgeWeightedDigraph;
+import Graphs.NegativeCycleFinder;
 
 import java.util.LinkedList;
 import java.util.Queue;

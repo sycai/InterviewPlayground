@@ -1,4 +1,7 @@
-package Graphs;
+package Graphs.SCC;
+
+import Graphs.DepthFirstOrder;
+import Graphs.Digraph;
 
 /**
  * Created by sycai on 2/13/2017.

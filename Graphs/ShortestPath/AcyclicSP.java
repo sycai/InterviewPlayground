@@ -1,5 +1,10 @@
-package Graphs;
+package Graphs.ShortestPath;
 
+
+import Graphs.Digraph;
+import Graphs.DirectedEdge;
+import Graphs.EdgeWeightedDigraph;
+import Graphs.Topological;
 
 import java.util.Deque;
 import java.util.LinkedList;

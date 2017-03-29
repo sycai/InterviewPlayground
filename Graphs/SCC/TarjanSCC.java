@@ -1,4 +1,6 @@
-package Graphs;
+package Graphs.SCC;
+
+import Graphs.Digraph;
 
 import java.util.Deque;
 import java.util.LinkedList;
