@@ -1,7 +1,6 @@
-package FindBuildOrder;
+package Graphs.FindBuildOrder;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by sycai on 1/20/2017.

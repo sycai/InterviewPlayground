@@ -1,4 +1,4 @@
-package FindBuildOrder;
+package Graphs.FindBuildOrder;
 
 import java.util.HashSet;
 import java.util.LinkedList;
