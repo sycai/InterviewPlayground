@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package RecursionAndDynamicProgramming;
 
 /**
  * Created by sycai on 3/24/2017.

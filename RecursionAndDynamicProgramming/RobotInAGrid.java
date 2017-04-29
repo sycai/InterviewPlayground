@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package RecursionAndDynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.HashSet;
