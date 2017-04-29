@@ -32,7 +32,14 @@ public class MagicIndex {
 
         int mid = lo + (hi - lo) /2;
         if      (A[mid] == mid) return mid;
-        else if (A[mid] > mid)  return findMagicDup(A, lo, Math.min(mid - 1, A[mid]));
-        else                    return findMagicDup(A, lo, Math.max(mid + 1, A[mid]));
+
+        // if there are many magic numbers, return the smallest one.
+        int leftRes = findMagicDup(A, lo, Math.min(mid-1, A[mid]));
+        if (leftRes > 0) {
+            return leftRes;
+        }
+
+        int rightRes = findMagicDup(A, Math.max(mid+1, A[mid]), hi);
+        return rightRes;
     }
 }
