@@ -7,8 +7,8 @@ package RecursionAndDynamicProgramming;
  */
 public class MaxSubarray {
     public static void main(String[] args) {
-        //double[] S = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
-        System.out.println(findMax(S1));
+        double[] S = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
+        System.out.println(findMax(S));
     }
 
     public static double findMax(double[] S) {
