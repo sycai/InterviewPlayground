@@ -38,11 +38,9 @@ public class MaxSubarray {
 
         double rightPartMax = Double.NEGATIVE_INFINITY;
         double rightSumSoFar = 0;
-        if (high > mid) {
-            for (int i = mid + 1; i <= high; i++) {
-                rightSumSoFar += S[i];
-                if (rightSumSoFar > rightPartMax) rightPartMax = rightSumSoFar;
-            }
+        for (int i = mid + 1; i <= high; i++) {
+            rightSumSoFar += S[i];
+            if (rightSumSoFar > rightPartMax) rightPartMax = rightSumSoFar;
         }
 
         return leftPartMax + rightPartMax;
