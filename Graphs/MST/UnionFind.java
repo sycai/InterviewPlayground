@@ -1,5 +1,7 @@
 package Graphs.MST;
 
+import java.util.LinkedList;
+
 /**
  * Created by sycai on 3/29/2017.
  */
@@ -20,12 +22,17 @@ public class UnionFind {
         return count;
     }
 
-    public int find(int p) {
+    public int find(int p) {  // With path compression
         int r = p;
+        LinkedList<Integer> ancestors = new LinkedList<>();
         while (id[r] != r) {
             r = id[r];
+            ancestors.add(r);
         }
         id[p] = r;
+        for (int a : ancestors) {
+            id[a] = r;
+        }
         return r;
     }
 
