@@ -1,4 +1,4 @@
-package Sorting;
+package SortingAndSearching;
 
 /**
  * Created by sycai on 5/8/2017.
