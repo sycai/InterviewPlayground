@@ -1,9 +1,9 @@
 package Hard;
 
 import Trees.Trie;
-
-import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 
 /**
  * CCI 17.17 Given a string b and an array of smaller strings T, design a method to search b for each small string in
@@ -20,17 +20,15 @@ public class MultiSearch {
         }
     }
 
-    public HashMap<String, ArrayList<Integer>> searchAll(String[] smalls) {
-        HashMap<String, ArrayList<Integer>> res = new HashMap<>();
+    public HashMap<String, List<Integer>> searchAll(String[] smalls) {
+        HashMap<String, List<Integer>> res = new HashMap<>();
         for (String s : smalls) {
             // Get terminating location of each occurence
-            ArrayList<Integer> locations = trie.search(s);
+            List<Integer> locations = trie.search(s);
 
             // Adjust to starting location
             if (locations != null) {
-               for (int i = 0; i < locations.size(); i++) {
-                   locations.set(i, locations.get(i) - s.length());
-               }
+               locations = locations.stream().map(x -> x - s.length()).collect(Collectors.toList());
             }
             res.put(s, locations);
         }
