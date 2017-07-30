@@ -1,6 +1,6 @@
 package Hard;
 
-import Trees.Trie;
+import Trees.IndexedTrie;
 import java.util.List;
 import java.util.HashMap;
 import java.util.stream.Collectors;
@@ -11,10 +11,10 @@ import java.util.stream.Collectors;
  */
 
 public class MultiSearch {
-    private Trie trie;
+    private IndexedTrie trie;
 
     public MultiSearch(String s) {
-        this.trie = new Trie();
+        this.trie = new IndexedTrie();
         for (int i = 0; i < s.length(); i++) {
             trie.insertString(s.substring(i), i);
         }

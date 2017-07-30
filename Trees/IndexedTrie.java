@@ -3,7 +3,7 @@ package Trees;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Trie {
+public class IndexedTrie {
     private class TrieNode {
         private HashMap<Character, TrieNode> children;
         private ArrayList<Integer> indices;
@@ -55,11 +55,11 @@ public class Trie {
 
     private TrieNode root;
 
-    public Trie() {
+    public IndexedTrie() {
         root = new TrieNode();
     }
 
-    public Trie(String s) {
+    public IndexedTrie(String s) {
         this();
         root.insertString(s, 0);
     }
