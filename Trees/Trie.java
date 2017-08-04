@@ -84,12 +84,33 @@ public class Trie {
         }
     }
 
+    public boolean containsPrefix(String s) { return containsPrefix(root, s); }
+
+    private boolean containsPrefix(TrieNode root, String s) {
+        if (s == null ) {
+            throw new IllegalArgumentException("Given string is null");
+        }
+
+        if (s.isEmpty()) {
+            return true;
+        } else if (root.hasChild(s.charAt(0))){
+            return containsPrefix(root.getChild(s.charAt(0)), s.substring(1));
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
         List<String> words = Arrays.asList("a", "abc", "abd", "");
         Trie t = new Trie(words);
         String[] tests = {"a", "ab", "abc", "abd", "abe", "b"};
+        System.out.println("=====Contains Whole Word Test=====");
         for (String test : tests) {
             System.out.println(test + "\t" + t.contains(test));
+        }
+        System.out.println("=====Contains Prefix Test=====");
+        for (String test : tests) {
+            System.out.println(test + "\t" + t.containsPrefix(test));
         }
     }
 }
