@@ -13,7 +13,7 @@ public class KMP {
         // Compute prefix function
         this.pattern = pattern;
         int len = pattern.length();
-        table = new int[len + 1];
+        table = new int[len];
         int k = 0;
         for (int q = 1; q < len; q++) {
             while (k > 0 && pattern.charAt(k) != pattern.charAt(q)) {
